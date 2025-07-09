@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+li,a {
+    text-decoration: none;
+    list-style: none;
+}
+nav {
+    display: flex;
+    align-items: center; 
+    margin: 25px 20px
+}
+line::before {
+    content: '';
+    left: 0;
+    bottom: -10;
+    width: 100%;
+    height: 3px;
+    background-color: #ff2c2c;
+}
+.logo {
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.logo img {
+    border-radius: 20px;
+}
+
+.Performance-Tracking {
+    display: flexbox;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 60px;
+
+}
+.Performance-b {
+    display: flex;
+    align-items: center;
+}
+.Performance-b i {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.sied-bar a{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: 0 30px;
+    color: black;
+    position: relative;
+}
+.sied-bar a:hover {
+    color: #2884da;
+}
+.sied-bar a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #2884da;
+    transition: all 0.5s;
+}
+.sied-bar a:hover::before {
+    width: 100%;
+}
+.sied-bar {
+    margin-top: 25px;
+
+}
+.search-bar {
+    margin-right: 50px;
+    background-color: azure;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius:30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+} 
+
+.search-bar:hover input {
+    width: 200px;
+}
+.search-bar input {
+    width: 0;
+    outline: none;
+    border:none ;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.search-bar i {
+    color: rgb(0, 0, 0);
+}
+.profind img {
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: all 0.4s;
+}
+.profind :hover {
+    transform: scale(1.1);
+}
+
