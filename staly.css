@@ -72,7 +72,7 @@ line::before {
     width: 0%;
     height: 3px;
     background-color: #2884da;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 .sied-bar a:hover::before {
     width: 100%;
@@ -115,4 +115,55 @@ line::before {
 .profind :hover {
     transform: scale(1.1);
 }
+/* text status */
+.text-wrapper-main {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    justify-content: space-between;
+    padding: 0px;
+}
+.text-wrapper-main h3 {
+    color: rgb(0, 0, 0,0.6);
+}
+.tasks {
+    margin-left: 50px;
+}
+.text-status {
+    display: flex;
+    gap: 110px;
+    align-items: center;
+}
+.text-status i {
+    margin-right: 60px;
+    color: rgb(0, 0, 0,0.6);
+    margin-top: 10px;
+    font-size: 200%;
+    transition: all 0.3s;
+}
+.text-status:hover {
+    scale: (1.1);
+}
+/* end */
 
+/* start */
+.high-priority {
+    padding: 0 90px;
+}
+.text-priority {
+    display: flex;
+    align-items: center;
+}
+.Checklist {
+    margin-left: 25px;
+    margin-top: 50px;
+}
+.group {
+    margin-bottom: 60px; 
+}
+.group input {
+    margin-right: 30px;
+}
+.group label {
+    font-size: 170%;
+}
