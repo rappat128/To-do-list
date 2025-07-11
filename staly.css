@@ -150,13 +150,32 @@ line::before {
 .high-priority {
     padding: 0 90px;
 }
+
+.text-priority:hover .text-priority-hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.text-priority {
+    transition: all(0.4s);
+}
+.text-priority-hover {
+    display: flex;
+    align-items: center;
+}  
+
 .text-priority {
     display: flex;
     align-items: center;
 }
+.hidden {
+  height: 0%;
+  /* display: none; */
+}
 .Checklist {
+    /* height: 100%; */
     margin-left: 25px;
     margin-top: 50px;
+    transition: all(0.4s);
 }
 .group {
     margin-bottom: 60px; 

@@ -87,8 +87,10 @@
                     <div class="level-priority">
                         <div class="high-priority">
                             <div class="text-priority">
-                                <i class="fa-solid fa-angle-down fa-2xl"></i>
-                                <h1><span>High-priority</span></h1>
+                                <div class="text-priority-hover">
+                                    <i class="fa-solid fa-angle-down fa-2xl"></i>
+                                    <h1><span>High-priority</span></h1>
+                                </div>
                             </div>
                             <div class="Checklist">
                                 <div class="group">
@@ -127,5 +129,13 @@
 
     </div>
 
+
+
+<script> 
+    document.querySelector('.text-priority').addEventListener('click', () => {
+    const checklist = document.querySelector('.Checklist');
+    checklist.classList.toggle('hidden');
+  });
+</script>
 </body>
 </html>
