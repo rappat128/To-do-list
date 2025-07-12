@@ -25,17 +25,19 @@
                 </div>
                 <div class="Performance-Tracking">
                     <div class="Performance-b">
-                        <h1><span>Performance Tracking</span></h1> 
-                        <i class="fa-solid fa-angle-down fa-2xl"></i>
+                        <div class="Performance-b-hover">
+                            <h1><span>Performance Tracking</span></h1> 
+                            <i class="fa-solid fa-angle-down fa-2xl"></i>
+                        </div>
                     </div>
                     
                     <div class="sied-bar">
                 
-                        <a href="#">List</a>
-                        <a href="#">Board</a>
-                        <a href="#">Calender</a>
-                        <a href="#">Analytics</a>
-                        <a href="#">Time line</a>
+                        <div class="text-a"><a href="#">List</a></div>
+                        <div class="text-a"><a href="#">Board</a></div>
+                        <div class="text-a"><a href="#">Calender</a></div>
+                        <div class="text-a"><a href="#">Analytics</a></div>
+                        <div class="text-a"><a href="#">Time line</a></div>
                     
                     </div>
                 </div>
@@ -131,11 +133,36 @@
 
 
 
-<script> 
-    document.querySelector('.text-priority').addEventListener('click', () => {
-    const checklist = document.querySelector('.Checklist');
-    checklist.classList.toggle('hidden');
-  });
-</script>
+    <script> 
+        
+        const textbox = document.querySelector('.text-priority')
+        textbox.addEventListener('click', () => {
+         
+            textbox.classList.toggle('rotate')
+            // bey
+            const checklist = document.querySelector('.Checklist');
+            checklist.classList.toggle('hidden');
+            
+        });
+
+        
+        // const text = document.querySelector('.text-a')
+        // text.addEventListener('click', ( ) => {
+
+        //     // const text =querySelector('.text-a');
+        //     text.classList.toggle('hidden-a')
+        // });
+    </script>
+    <script>
+        const Performance = document.querySelector('.Performance-b')
+        Performance.addEventListener('click', () => {
+         
+            Performance.classList.toggle('rotate-Performance-b')
+            // bey
+            const siedber = document.querySelector('.sied-bar');
+            siedber.classList.toggle('hidden-sied-bar');
+            
+        });
+    </script>
 </body>
 </html>

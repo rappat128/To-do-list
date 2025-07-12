@@ -38,21 +38,46 @@ line::before {
 }
 
 .Performance-Tracking {
-    display: flexbox;
-    align-items: center;
+    display:block ;
     flex-grow: 1;
-    margin-left: 60px;
 
+    margin-left: 60px;
+    cursor: pointer;
 }
-.Performance-b {
+.Performance-b:hover  {
+    transform: scale(1.05);
+}
+.Performance-b-hover {
     display: flex;
     align-items: center;
 }
-.Performance-b i {
-    margin-left: 10px;
-    margin-top: 5px;
+.Performance-b {
+    display: flex;
+    transform-origin: center center;
+    transition:transform 0.3s ease;
+    width: fit-content;    /* เมื่อhover ไปด้านข้าง บรรดทัดนี้จะช่วยคุณ */
 }
-.sied-bar a{
+
+.Performance-b i {
+    margin-left: 5px;
+    margin-top: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+.Performance-b.rotate-Performance-b i {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+}
+.sied-bar {
+    display: flex;
+    align-items: center;
+}
+
+.hidden-sied-bar {
+    display: none;
+}
+
+.text-a a{
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 600;
@@ -61,10 +86,10 @@ line::before {
     color: black;
     position: relative;
 }
-.sied-bar a:hover {
+.text-a a:hover {
     color: #2884da;
 }
-.sied-bar a::before {
+.text-a a::before {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -82,6 +107,7 @@ line::before {
 
 }
 .search-bar {
+    
     margin-right: 50px;
     background-color: azure;
     display: flex;
@@ -101,7 +127,9 @@ line::before {
     border:none ;
     font-weight: 500;
     transition: 0.8s;
-    background: transparent;
+    background: transparent;  /* หมายถึงการทำให้ พื้นหลังของ element ใสหรือก็คือ ไม่มีสี ไม่มีพื้นหลังใด ๆ */
+
+
 }
 
 .search-bar i {
@@ -144,6 +172,7 @@ line::before {
 .text-status:hover {
     scale: (1.1);
 }
+
 /* end */
 
 /* start */
@@ -152,30 +181,43 @@ line::before {
 }
 
 .text-priority:hover .text-priority-hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
 }
 .text-priority {
-    transition: all(0.4s);
+    transition:transform 0.3s ease;
 }
 .text-priority-hover {
     display: flex;
     align-items: center;
+    transition:transform 0.3s ease;
 }  
 
 .text-priority {
     display: flex;
     align-items: center;
 }
+.text-priority i {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+.text-priority.rotate i {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
 .hidden {
-  height: 0%;
-  /* display: none; */
+    /* height: 0%; */
+    display: none;
+    opacity: 0;
+    max-height: 0;
 }
 .Checklist {
-    /* height: 100%; */
+    height: 1000px;
     margin-left: 25px;
     margin-top: 50px;
-    transition: all(0.4s);
+    transition: max-height 1s ease, opacity 0.8s ease;
+    overflow: hidden;
+    opacity: 1;
 }
 .group {
     margin-bottom: 60px; 
