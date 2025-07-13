@@ -68,6 +68,9 @@ line::before {
     transform: rotate(90deg);
     transition: transform 0.3s;
 }
+.Performance-sied-bar {
+    display: block;
+}
 .sied-bar {
     display: flex;
     align-items: center;
@@ -175,9 +178,16 @@ line::before {
 
 /* end */
 
-/* start */
-.high-priority {
+/* -------------------------------------------start----------------------------------------------- */
+.level-priority {
+    display: block;
     padding: 0 90px;
+}
+
+.high-priority {
+    /* padding: 0 90px; */
+    display: block;
+    height: max-content;
 }
 
 .text-priority:hover .text-priority-hover{
@@ -212,7 +222,7 @@ line::before {
     max-height: 0;
 }
 .Checklist {
-    height: 1000px;
+    height: 450px;
     margin-left: 25px;
     margin-top: 50px;
     transition: max-height 1s ease, opacity 0.8s ease;
@@ -226,5 +236,58 @@ line::before {
     margin-right: 30px;
 }
 .group label {
+    font-size: 170%;
+}
+/* ------------mid-------------- */
+.mid-priority {
+    margin-top: 40px;
+}
+
+.mid-text-priority:hover .mid-text-priority-hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.mid-text-priority {
+    transition:transform 0.3s ease;
+}
+.mid-text-priority-hover {
+    display: flex;
+    align-items: center;
+    transition:transform 0.3s ease;
+}  
+
+.mid-text-priority {
+    display: flex;
+    align-items: center;
+}
+.mid-text-priority i {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+.mid-text-priority.rotate i {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+.mid-hidden {
+    /* height: 0%; */
+    display: none;
+    opacity: 0;
+    max-height: 0;
+}
+.mid-Checklist {
+    height: 450px;
+    margin-left: 25px;
+    margin-top: 50px;
+    transition: max-height 1s ease, opacity 0.8s ease;
+    overflow: hidden;
+    opacity: 1;
+}
+.mid-group {
+    margin-bottom: 60px; 
+}
+.mid-group input {
+    margin-right: 30px;
+}
+.mid-group label {
     font-size: 170%;
 }
