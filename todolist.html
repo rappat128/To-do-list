@@ -26,14 +26,15 @@
                 <div class="Performance-Tracking">
                     <div class="Performance-sied-bar">
                         <div class="Performance-b">
-                            <div class="Performance-b-hover">
-                                <h1><span>Performance Tracking</span></h1> 
-                                <i class="fa-solid fa-angle-down fa-2xl"></i>
+                            <div class="Performance-b-box">
+                                 <div class="Performance-b-hover">
+                                    <h1><span>Performance Tracking</span></h1> 
+                                    <i class="fa-solid fa-angle-down fa-2xl"></i>
+                                </div>
                             </div>
                         </div>
-                    
+                            
                         <div class="sied-bar">
-                    
                             <div class="text-a"><a href="#">List</a></div>
                             <div class="text-a"><a href="#">Board</a></div>
                             <div class="text-a"><a href="#">Calender</a></div>
@@ -41,15 +42,16 @@
                             <div class="text-a"><a href="#">Time line</a></div>
                         </div>
                     </div>
-                    
                 </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <a href="#">
-                        <i class="fas fa-search"></i>
-                    </a>
-                        
+                <div class="search-bar-box">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="profind">
                     <img style="width: 90px;" src="https://i.pinimg.com/736x/21/0f/5e/210f5e82fc2e67b2182b04f238659ed0.jpg" alt="">
                 </div>
@@ -133,26 +135,26 @@
                             </div>
                             <div class="mid-Checklist">
                                 <div class="mid-group">
-                                    <input type="checkbox"id="Checklist1">
-                                    <label for="Checklist1">Checklist1</label>
+                                    <input type="checkbox"id="mid-Checklist1">
+                                    <label for="mid-Checklist1">Checklist1</label>
                                     <div style="width: 100%; height: 1px; margin-top: 20px; background-color: rgb(0, 0, 0,0.2);"></div>
                                 </div>
 
                                 <div class="mid-group">
-                                    <input type="checkbox"id="Checklist2">
-                                    <label for="Checklist2">Checklist2</label>
+                                    <input type="checkbox"id="mid-Checklist2">
+                                    <label for="mid-Checklist2">Checklist2</label>
                                     <div style="width: 100%; height: 1px; margin-top: 20px; background-color: rgb(0, 0, 0,0.2);"></div>
                                 </div>
 
                                 <div class="mid-group">
-                                    <input type="checkbox"id="Checklist3">
-                                    <label for="Checklist3">Checklist3</label>
+                                    <input type="checkbox"id="mid-Checklist3">
+                                    <label for="mid-Checklist3">Checklist3</label>
                                     <div style="width: 100%; height: 1px; margin-top: 20px; background-color: rgb(0, 0, 0,0.2);"></div>
                                 </div>
 
                                 <div class="mid-group">
-                                    <input type="checkbox"id="Checklist4">
-                                    <label for="Checklist4">Checklist4</label>
+                                    <input type="checkbox"id="mid-Checklist4">
+                                    <label for="mid-Checklist4">Checklist4</label>
                                     <div style="width: 100%; height: 1px; margin-top: 20px; background-color: rgb(0, 0, 0,0.2);"></div>
                                 </div>
                                 <!-- -------- -->
@@ -172,7 +174,7 @@
 
     <script> 
         
-        const textbox = document.querySelector('.text-priority ,.mid-text-priority')
+        const textbox = document.querySelector('.text-priority-hover ')
         textbox.addEventListener('click', () => {
          
             textbox.classList.toggle('rotate')
@@ -184,8 +186,6 @@
             // midtextbox.classList.toggle('hidden');
 
         });
-
-        
         // const text = document.querySelector('.text-a')
         // text.addEventListener('click', ( ) => {
 
@@ -193,13 +193,20 @@
         //     text.classList.toggle('hidden-a')
         // });
     </script>
-
+         
     <script>
-       
+       const textbox2 = document.querySelector('.mid-text-priority-hover')
+       textbox2.addEventListener('click', () => {
+
+            textbox2.classList.toggle('mid-rotate')
+
+            const Checklist2 = document.querySelector('.mid-Checklist');
+            Checklist2.classList.toggle('mid-hidden');
+       });
     </script>
 
-    <script>
 
+    <script>
         const Performance = document.querySelector('.Performance-b')
         Performance.addEventListener('click', () => {
          
@@ -211,6 +218,8 @@
         });
     </script>
 
-
+    <script>
+        const clicksiedber = document.querySelector('')
+    </script>
 </body>
 </html>

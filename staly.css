@@ -15,7 +15,7 @@ li,a {
 }
 nav {
     display: flex;
-    align-items: center; 
+    /* align-items: center;  */
     margin: 25px 20px
 }
 line::before {
@@ -40,7 +40,6 @@ line::before {
 .Performance-Tracking {
     display:block ;
     flex-grow: 1;
-
     margin-left: 60px;
     cursor: pointer;
 }
@@ -58,6 +57,10 @@ line::before {
     width: fit-content;    /* เมื่อhover ไปด้านข้าง บรรดทัดนี้จะช่วยคุณ */
 }
 
+.Performance-b-box {
+    display: block;
+    align-items: end;
+}
 .Performance-b i {
     margin-left: 5px;
     margin-top: 5px;
@@ -74,8 +77,12 @@ line::before {
 .sied-bar {
     display: flex;
     align-items: center;
+    
 }
-
+.search-bar-box {
+    display: flex;
+    align-items: center;
+}
 .hidden-sied-bar {
     display: none;
 }
@@ -207,11 +214,11 @@ line::before {
     display: flex;
     align-items: center;
 }
-.text-priority i {
+.text-priority-hover i {
     transform: rotate(0deg);
     transition: transform 0.3s;
 }
-.text-priority.rotate i {
+.text-priority-hover.rotate i {
     transform: rotate(-90deg);
     transition: transform 0.3s;
 }
@@ -237,6 +244,33 @@ line::before {
 }
 .group label {
     font-size: 170%;
+    
+}
+/* --------------------cg-Checklist--------------------------------- */
+input[type="checkbox"] {
+    display: none;
+}
+label {
+    position: relative;
+    margin-left: 45px;
+}
+label::before {
+    content: '';
+    background: url(img/pngegg.png);
+    background-position: center;
+    background-size: contain ;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -35px;
+    margin-top: 2px;
+
+    transform: scale(0); rotateZ (180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01 , 0 , 1.49);
+}
+
+input[type="checkbox"]:checked + label::before {
+    transform: scale(1); rotateZ (0deg);
 }
 /* ------------mid-------------- */
 .mid-priority {
@@ -260,11 +294,12 @@ line::before {
     display: flex;
     align-items: center;
 }
-.mid-text-priority i {
+.mid-text-priority-hover i {
     transform: rotate(0deg);
     transition: transform 0.3s;
+    width: fit-content;
 }
-.mid-text-priority.rotate i {
+.mid-text-priority-hover.mid-rotate i {
     transform: rotate(-90deg);
     transition: transform 0.3s;
 }
