@@ -246,24 +246,24 @@ line::before {
     font-size: 170%;
     
 }
-/* --------------------cg-Checklist--------------------------------- */
+/* ---------------------------------------cg-Checklist --------------------------------- */
 input[type="checkbox"] {
     display: none;
 }
 label {
     position: relative;
     margin-left: 45px;
+    user-select: none;
 }
 label::before {
     content: '';
     background: url(img/pngegg.png);
     background-position: center;
     background-size: contain ;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: -35px;
-    margin-top: 2px;
 
     transform: scale(0); rotateZ (180deg);
     transition: all 0.4s cubic-bezier(0.54, 0.01 , 0 , 1.49);
@@ -272,7 +272,18 @@ label::before {
 input[type="checkbox"]:checked + label::before {
     transform: scale(1); rotateZ (0deg);
 }
-/* ------------mid-------------- */
+label::after {
+    content: '';
+    border: 2px solid #27ae60;
+    width: 30px;
+    height: 30px;
+    left: -35px;
+    border-radius: 50%;
+    position: absolute;
+}
+/* --------------------------------------- end-cg-checklist ---------------------------- */
+
+/* ---------------------------------------mid-------------------------------- */
 .mid-priority {
     margin-top: 40px;
 }
@@ -324,5 +335,78 @@ input[type="checkbox"]:checked + label::before {
     margin-right: 30px;
 }
 .mid-group label {
+    font-size: 170%;
+}
+/* ----------------------label content-------------------------------*/
+.editable {
+    padding: 5px 20px;
+    border: 1px dashed transparent;
+    transition: border 0.3s;
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 130%;
+    /* user-select: none;  */
+    pointer-events: none; /* ❗กันไม่ให้คลิก */
+}
+
+.editable:focus {
+    outline: none;
+    /* border: 1px dashed #888; */
+    background-color: #f9f9f9;
+}
+/* ------------------------------------end-------------------------------------- */
+
+/* ------------------------------------low-------------------------------------- */
+.low-priority {
+    margin-top: 40px;
+}
+
+.low-text-priority:hover .low-text-priority-hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.low-text-priority {
+    transition:transform 0.3s ease;
+}
+.low-text-priority-hover {
+    display: flex;
+    align-items: center;
+    transition:transform 0.3s ease;
+}  
+
+.low-text-priority {
+    display: flex;
+    align-items: center;
+}
+.low-text-priority-hover i {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+    width: fit-content;
+}
+.low-text-priority-hover.low-rotate i {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+.low-hidden {
+    /* height: 0%; */
+    display: none;
+    opacity: 0;
+    max-height: 0;
+}
+.low-Checklist {
+    height: 450px;
+    margin-left: 25px;
+    margin-top: 50px;
+    transition: max-height 1s ease, opacity 0.8s ease;
+    overflow: hidden;
+    opacity: 1;
+}
+.low-group {
+    margin-bottom: 60px; 
+}
+.low-group input {
+    margin-right: 30px;
+}
+.low-group label {
     font-size: 170%;
 }
